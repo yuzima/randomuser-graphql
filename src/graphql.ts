@@ -1,4 +1,4 @@
-import {ApolloServer, gql} from 'apollo-server-lambda'
+import { ApolloServer, gql } from 'apollo-server-lambda'
 import fetch from 'node-fetch'
 
 const typeDefs = gql`
@@ -104,8 +104,6 @@ const server = new ApolloServer({
 export const handler = server.createHandler({
     cors: {
         origin: '*',
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        allowedHeaders:
-            'Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,Keep-Alive,X-Requested-With,If-Modified-Since',
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
     },
 })
